@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://viking-cup.fr/</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <!-- Page résultat -->
+    <url>
+        <loc>https://viking-cup.fr/resultats</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <!-- Page du règlement -->
+    <url>
+        <loc>https://viking-cup.fr/regles</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- Page FAQ -->
+    <url>
+        <loc>https://viking-cup.fr/faq</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Page sponsors -->
+    <url>
+        <loc>https://viking-cup.fr/sponsors</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <!-- Page galerie -->
+    <url>
+        <loc>https://viking-cup.fr/galerie</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <!-- Page medias -->
+    <url>
+        <loc>https://viking-cup.fr/medias</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Page d'inscription -->
+    <url>
+        <loc>https://viking-cup.fr/inscription</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- Page billetterie -->
+    <url>
+        <loc>https://viking-cup.fr/billetterie</loc>
+        <lastmod>2025-11-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

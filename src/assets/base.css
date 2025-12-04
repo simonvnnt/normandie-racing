@@ -1,0 +1,121 @@
+:root {
+  --red: #C70202;
+  --bg-primary: #3E3E3E;
+  --bg-primary-lighter: #595959;
+  --bg-primary-light: #6a6a6a;
+  --bg-secondary: #1F1F1F;
+  --bg-secondary-light: #323131;
+  --bg-transparent: hsla(0, 0%, 42%, 0.7);
+  --bg-transparent-light: hsla(0, 0%, 42%, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  background: var(--bg-primary);
+  line-height: 1.6;
+  font-family: 'Figtree', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: clamp(1rem, .8rem + .4vw, 1.2rem);
+  line-height: 160%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-finder tracking-wide;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 5vw, 3.75rem) !important;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem) !important;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 0.3rem + 1.7vw, 2.1rem) !important;
+}
+
+h4 {
+  font-size: clamp(1rem, 0.2rem + 1.5vw, 1.5rem) !important;
+}
+
+.small {
+  font-size: clamp(1rem, .4rem + .4vw, 1.2rem);
+  line-height: 160%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  caret-color: white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0 1000px var(--bg-primary-light) inset;
+  box-shadow: 0 0 0 1000px var(--bg-primary-light) inset;
+}
+
+.btn-sweep {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.btn-sweep::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform: translateX(0);
+  z-index: 0;
+}
+
+.btn-sweep:hover::before {
+  transform: translateX(100%);
+}
+
+.btn-sweep > * {
+  position: relative;
+  z-index: 10;
+}
+
+
+.text-sweep {
+  position: relative;
+  display: flex;
+}
+
+.text-sweep::after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path 0.35s cubic-bezier(.785, .135, .15, .86);
+}
+
+.text-sweep:hover::after {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 10;
+}

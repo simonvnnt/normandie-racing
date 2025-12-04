@@ -1,0 +1,7 @@
+/* latin */
+@font-face {
+    font-family: 'blutter';
+    font-style: normal;
+    font-display: swap;
+    src: url(blutter.ttf) format('truetype');
+}

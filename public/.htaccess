@@ -1,0 +1,26 @@
+<IfModule mod_headers.c>
+    <FilesMatch "\.(pdf)$">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Redirection 301 de www vers non-www
+    RewriteCond %{HTTP_HOST} ^www\.viking-cup\.fr$ [NC]
+    RewriteRule ^(.*)$ https://viking-cup.fr/$1 [R=301,L]
+
+    # Exclure robots.txt de la réécriture
+    RewriteCond %{REQUEST_URI} !^/robots\.txt$
+
+    # Exclure sitemap.xml de la réécriture
+    RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+
+    # Réécriture pour les fichiers manquants vers index.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.html [L]
+</IfModule>

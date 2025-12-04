@@ -1,0 +1,7 @@
+/* latin */
+@font-face {
+    font-family: 'rush flow';
+    font-style: normal;
+    font-display: swap;
+    src: url(rush-flow.otf) format('opentype');
+}
