@@ -74,6 +74,10 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0 1000px var(--bg-primary-light) inset;
 }
 
+.rush-flow {
+  font-family: 'rush flow', sans-serif;
+}
+
 .btn-sweep {
   position: relative;
   overflow: hidden;

@@ -51,6 +51,10 @@ function closeModal() {
         <h1 class="w-fit uppercase pt-5 pb-3 pl-4 pr-7 leading-none bg-red-vk italic">
           Normandie Racing
         </h1>
+
+        <h2 class="w-fit float-right translate-x-1/4 -translate-y-4 text-2xl md:text-3xl xl:text-5xl text-black bg-white px-3 md:px-4 pt-2 md:pt-3 pb-1 md:pb-2 rush-flow">
+          La bonne trajectoire
+        </h2>
       </div>
     </div>
   </div>

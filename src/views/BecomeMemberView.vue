@@ -60,6 +60,7 @@ const benefits = [
 
           <a
             href="https://www.helloasso.com/associations/normandie-racing/adhesions/adhesion"
+            target="_blank"
             class="btn-sweep bg-red-vk before:bg-white text-white hover:text-black font-finder flex justify-center px-1 md:px-1.5 lg:px-4 py-3 transition-all duration-200"
           >
             <span>Devenir Membre !</span>
