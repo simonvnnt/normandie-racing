@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
-import DriftCarousel from '@/components/round-carousel/DriftCarousel.vue'
+import { onMounted, ref } from 'vue'
 import TitleSecondary from '@/components/TitleSecondary.vue'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import SponsorModal from '@/components/SponsorModal.vue'
 import sponsorsData from '../data/sponsors.json'
 
@@ -75,17 +73,19 @@ function closeModal() {
 
         <template v-if="sponsors && sponsors?.length > 0">
           <div class="grid grid-cols-4 gap-6 md:gap-10 w-full mt-10 md:mt-14 lg:mt-20" data-aos="fade-up">
-            <div
-              @click="openModal(sponsor)"
-              v-for="(sponsor, index) in sponsors"
-              :key="index"
-              :title="sponsor.name"
-              class="col-span-2 lg:col-span-1 bg-primary-light hover:bg-white rounded-md backdrop-blur-md cursor-pointer transition-all duration-300 ease-in-out saturate-120 hover:saturate-150 hover:-translate-y-1"
-            >
-              <div class="flex justify-center items-center p-2">
-                <img :src="sponsor.filePath" :alt="sponsor.alt" class="w-full max-w-40 max-h-40" />
+            <template v-for="(sponsor, index) in sponsors">
+              <div
+                @click="openModal(sponsor)"
+                v-if="sponsor.displayWebsite"
+                :key="index"
+                :title="sponsor.name"
+                class="col-span-2 lg:col-span-1 bg-primary-light hover:bg-white rounded-md backdrop-blur-md cursor-pointer transition-all duration-300 ease-in-out saturate-120 hover:saturate-150 hover:-translate-y-1"
+              >
+                <div class="flex justify-center items-center p-2">
+                  <img :src="sponsor.filePath" :alt="sponsor.alt" class="w-full max-w-40 max-h-40" />
+                </div>
               </div>
-            </div>
+            </template>
           </div>
         </template>
         <template v-else>
