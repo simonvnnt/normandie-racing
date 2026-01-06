@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Viking Cup",
     "description": "Compétition de Drift",
-    "filePath": "uploads\/media\/nr-67c452eb4d3d7567575929.webp",
+    "filePath": "img\/sponsors\/vk-cup-square.webp",
     "alt": "Viking Cup",
     "links": [
       {
@@ -40,7 +40,7 @@
     "id": 2,
     "name": "Viking Drinks",
     "description": "Marque de Boissons",
-    "filePath": "uploads\/media\/vk-drinks-67c4591f70fb2229641213.webp",
+    "filePath": "img\/sponsors\/vk-drinks.webp",
     "alt": "VK Drinks",
     "links": [
       {
@@ -68,7 +68,7 @@
     "id": 5,
     "name": "Garage St Michel",
     "description": "Garage et carrosserie Primum \u00e0 CAEN",
-    "filePath": "uploads\/media\/garage-st-michel-67c459b050b08688476972.webp",
+    "filePath": "img\/sponsors\/garage-st-michel.webp",
     "alt": "Garage St Michel",
     "links": [
       {
@@ -96,7 +96,7 @@
     "id": 9,
     "name": "NDTC Reprog",
     "description": "Reprogrammation moteur en Normandie",
-    "filePath": "uploads\/media\/ndtc-67c45a855a59f937783458.webp",
+    "filePath": "img\/sponsors\/ndtc.webp",
     "alt": "NDTC Reprog",
     "links": [
       {
@@ -124,7 +124,7 @@
     "id": 10,
     "name": "GW14",
     "description": "GW14 \u00c9chappement, le leader de l\u2019\u00e9chappement sur mesure en Normandie",
-    "filePath": "uploads\/media\/gw14-67c45ad0b0770854973760.webp",
+    "filePath": "img\/sponsors\/gw14.webp",
     "alt": "GW14 \u00c9chappement",
     "links": [
       {
@@ -170,7 +170,7 @@
     "id": 11,
     "name": "Carrefour Contact Vassy",
     "description": "Carrefour Contact de Vassy, Calvados (14)",
-    "filePath": "sponsors/carrefour-contact-vassy.webp",
+    "filePath": "img/sponsors/carrefour-vassy.webp",
     "alt": "Carrefour Contact Vassy",
     "links": [
       {
@@ -196,10 +196,10 @@
   },
   {
       "id": 20,
-      "name": "Drift Shop",
+      "name": "DriftShop",
       "description": "Vente en ligne de pièces auto",
-      "filePath": "sponsors/drift-shop.png",
-      "alt": "Drift Shop",
+      "filePath": "img\/sponsors\/driftshop.webp",
+      "alt": "DriftShop",
       "links": [
         {
             "id": 46,

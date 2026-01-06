@@ -55,7 +55,7 @@ const currentYear = new Date().getFullYear();
         </li>
         <li>
           <div class="flex items-center">
-            <img src="/img/vk-drinks.webp" alt="Viking Drinks" class="w-10 h-10" width="40" height="40" />
+            <img src="/img/sponsors/vk-drinks.webp" alt="Viking Drinks" class="w-10 h-10" width="40" height="40" />
             <span class="ml-2">Viking!Drinks</span>
           </div>
         </li>
@@ -107,7 +107,7 @@ const currentYear = new Date().getFullYear();
         <li>
           <a href="mailto:normandieracing.drift.grip@gmail.com" class="flex items-center gap-3">
             <font-awesome-icon :icon="['fas', 'envelope']" size="lg" />
-            <span data-link="normandieracing.drift.grip@gmail.com" class="text-sweep after:text-red-500 after:content-[attr(data-link)]">
+            <span data-link="normandieracing.drift.grip@gmail.com" title="normandieracing.drift.grip@gmail.com" class="text-sweep wrap-anywhere after:text-red-500 after:content-[attr(data-link)]">
               normandieracing.drift.grip@gmail.com
             </span>
           </a>

@@ -32,7 +32,7 @@ watch(
       <div class="flex justify-between items-center h-full">
         <!-- Logo -->
         <div class="z-40">
-          <RouterLink to="/"><img alt="Viking Cup" src="/img/vk-cup-square-light.webp" class="w-14 sm:w-20" width="80" height="80" /></RouterLink>
+          <RouterLink to="/"><img alt="Viking Cup" src="/img/nr-light.webp" class="w-14 sm:w-20" width="80" height="80" /></RouterLink>
         </div>
 
         <!-- NavBar | Desktop -->
@@ -42,7 +42,7 @@ watch(
               Accueil
             </RouterLink>
           </li>
-          <li>
+          <li class="hidden">
             <RouterLink to="/evenements" activeClass="text-red-500" data-link="Événements" class="text-sweep after:text-red-500 after:content-[attr(data-link)] mx-1 md:mx-1.5 lg:mx-4 my-1.5">
               Événements
             </RouterLink>
@@ -75,7 +75,7 @@ watch(
               Accueil
             </RouterLink>
           </li>
-          <li class="delay-[220ms]">
+          <li class="delay-[220ms] hidden">
             <RouterLink to="/evenements" activeClass="text-red-500" data-link="Événements" class="mx-5 my-1.5 text-sweep after:text-red-500 after:content-[attr(data-link)]">
               Événements
             </RouterLink>

@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import TitleSecondary from '@/components/TitleSecondary.vue'
 import SponsorModal from '@/components/SponsorModal.vue'
 import sponsorsData from '../data/sponsors.json'
+import ImageModalable from '@/components/ImageModalable.vue'
 
 type Sponsor = {
   id: number;
@@ -36,35 +37,37 @@ function closeModal() {
 </script>
 
 <template>
-  <div class="relative overflow-hidden h-screen">
-    <video autoplay muted loop playsinline
-           class="shadow-md absolute z-20 object-cover object-bottom w-full h-full" >
-      <source :src="'/img/bg.webm'" type="video/webm" />
-      <source :src="'/img/bg.mp4'" type="video/mp4" />
-    </video>
+<!--  <div class="relative overflow-hidden h-screen">-->
+<!--    <video autoplay muted loop playsinline-->
+<!--           class="shadow-md absolute z-20 object-cover object-bottom w-full h-full" >-->
+<!--      <source :src="'/img/bg.webm'" type="video/webm" />-->
+<!--      <source :src="'/img/bg.mp4'" type="video/mp4" />-->
+<!--    </video>-->
 
-    <div class="relative z-20 pt-[15vh] sm:pt-[25vh] px-1 lg:px-4 xl:px-12">
-      <!-- Title -->
-      <div class="relative inline-block px-2 xl:px-4">
-        <h1 class="w-fit uppercase pt-5 pb-3 pl-4 pr-7 leading-none bg-red-vk italic">
-          Normandie Racing
-        </h1>
+  <div class="relative z-20 pt-[10vh] sm:pt-[15vh] px-1 lg:px-4 xl:px-12 sm:mx-auto sm:w-fit">
+    <!-- Title -->
+    <div class="relative inline-block px-2 xl:px-4">
+      <h1 class="w-fit uppercase pt-5 pb-3 pl-4 pr-5 leading-none bg-red-vk italic">
+        Normandie Racing
+      </h1>
 
-        <h2 class="w-fit float-right translate-x-1/4 -translate-y-4 text-2xl md:text-3xl xl:text-5xl text-black bg-white px-3 md:px-4 pt-2 md:pt-3 pb-1 md:pb-2 rush-flow">
-          La bonne trajectoire
-        </h2>
-      </div>
+      <h2 class="w-fit float-right translate-x-[12%] sm:translate-x-1/4 -translate-y-3 text-xl md:text-3xl xl:text-5xl text-black bg-white px-3 md:px-4 pt-2 md:pt-3 pb-1 md:pb-2 rush-flow">
+        La bonne trajectoire
+      </h2>
     </div>
   </div>
+<!--  </div>-->
 
-  <div class="max-w-7xl mx-auto pb-10">
-    <div class="w-full py-12 flex flex-col gap-6 md:gap-20">
-<!--      <div class="w-full mx-auto"-->
-<!--        v-if="currentSeasonRounds && currentSeasonRounds.length > 0">-->
-<!--        <DriftCarousel :rounds="currentSeasonRounds" />-->
-<!--      </div>-->
+  <div class="max-w-7xl mx-auto pb-10 pt-14 px-8">
+    <ImageModalable
+      :img-class="'rounded-md cursor-pointer'"
+      :src="'/img/calendrier.jpg'"
+      :alt="'Media'"
+      :width="'1200'"
+    />
 
-      <section id="format" class="w-full mx-auto px-8 flex flex-col items-center">
+    <div class="w-full py-12 flex flex-col gap-6 md:gap-20 pt-24">
+      <section id="format" class="w-full mx-auto flex flex-col items-center">
         <TitleSecondary>
           <template #title>
             Nos partenaires
@@ -102,7 +105,7 @@ function closeModal() {
 
 <style scoped>
 h1 {
-  font-size: clamp(1.5rem, 1.5rem + 4.5vw, 5rem) !important;
+  font-size: clamp(1.25rem, 1.25rem + 3vw, 5rem) !important;
 }
 
 h3 {
