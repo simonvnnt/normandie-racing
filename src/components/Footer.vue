@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 <template>
   <footer id="footer" class="relative w-full bg-secondary">
 
-    <div class="grid grid-cols-8 gap-4 w-11/12 md:w-10/12 mx-auto py-10">
+    <div class="grid grid-cols-8 gap-4 mx-auto py-10 px-6 md:px-8">
       <ul class="flex flex-col p-2.5 gap-3 col-span-8 sm:col-span-4 md:col-span-2">
         <li>
           <h2>Menu</h2>
@@ -107,7 +107,7 @@ const currentYear = new Date().getFullYear();
         <li>
           <a href="mailto:normandieracing.drift.grip@gmail.com" class="flex items-center gap-3">
             <font-awesome-icon :icon="['fas', 'envelope']" size="lg" />
-            <span data-link="normandieracing.drift.grip@gmail.com" title="normandieracing.drift.grip@gmail.com" class="text-sweep wrap-anywhere after:text-red-500 after:content-[attr(data-link)]">
+            <span data-link="normandieracing.drift.grip@gmail.com" title="normandieracing.drift.grip@gmail.com" class="text-sweep after:text-red-500 after:content-[attr(data-link)]" style="overflow-wrap: anywhere">
               normandieracing.drift.grip@gmail.com
             </span>
           </a>
