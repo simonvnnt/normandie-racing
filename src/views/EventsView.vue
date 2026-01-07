@@ -32,23 +32,28 @@ onMounted(() => {
     </Title>
 
 
-    <template v-if="events && events?.length > 0">
-      <div class="grid grid-cols-4 gap-6 md:gap-10 w-full mt-10 md:mt-14 lg:mt-20">
-        <template v-for="(event, index) in events" :key="index">
-          <div
-            data-aos="fade-up"
-            class="col-span-2 lg:col-span-1 flex flex-col justify-center gap-4"
-            v-if="event.name && event.imagePath">
-            <h3 class="text-center">{{event.name}}</h3>
+    <template v-if="events">
+      <template v-if="events?.length > 0">
+        <div class="grid grid-cols-4 gap-6 md:gap-10 w-full mt-10 md:mt-14 lg:mt-20">
+          <template v-for="(event, index) in events" :key="index">
+            <div
+              data-aos="fade-up"
+              class="col-span-2 lg:col-span-1 flex flex-col justify-center gap-4"
+              v-if="event.name && event.imagePath">
+              <h3 class="text-center">{{event.name}}</h3>
 
-            <ImageModalable
-              :img-class="'w-full max-w-120 max-w-120 rounded-md backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1'"
-              :src="event.imagePath"
-              :alt="event.name"
-            />
-          </div>
-        </template>
-      </div>
+              <ImageModalable
+                :img-class="'w-full max-w-120 max-w-120 rounded-md backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1'"
+                :src="event.imagePath"
+                :alt="event.name"
+              />
+            </div>
+          </template>
+        </div>
+      </template>
+      <template v-else>
+        <h3 data-aos="fade-up" class="pt-12">Aucun événement prévu pour le moment. Restez connectés !</h3>
+      </template>
     </template>
   </div>
 </template>
