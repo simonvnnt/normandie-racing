@@ -38,12 +38,12 @@ onMounted(() => {
           <template v-for="(event, index) in events" :key="index">
             <div
               data-aos="fade-up"
-              class="col-span-2 lg:col-span-1 flex flex-col justify-center gap-4"
+              class="col-span-4 lg:col-span-2 2xl:col-span-1 flex flex-col justify-center gap-4"
               v-if="event.name && event.imagePath">
               <h3 class="text-center">{{event.name}}</h3>
 
               <ImageModalable
-                :img-class="'w-full max-w-120 max-w-120 rounded-md backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1'"
+                :img-class="'w-full rounded-md backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1'"
                 :src="event.imagePath"
                 :alt="event.name"
               />
