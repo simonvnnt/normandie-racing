@@ -10,8 +10,8 @@
     RewriteBase /
 
     # Redirection 301 de www vers non-www
-    RewriteCond %{HTTP_HOST} ^www\.viking-cup\.fr$ [NC]
-    RewriteRule ^(.*)$ https://viking-cup.fr/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www\.normandie-racing\.fr$ [NC]
+    RewriteRule ^(.*)$ https://normandie-racing.fr/$1 [R=301,L]
 
     # Exclure robots.txt de la réécriture
     RewriteCond %{REQUEST_URI} !^/robots\.txt$
