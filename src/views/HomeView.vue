@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import TitleSecondary from '@/components/TitleSecondary.vue'
 import SponsorModal from '@/components/SponsorModal.vue'
 import sponsorsData from '../data/sponsors.json'
-import ImageModalable from '@/components/ImageModalable.vue'
+import api from '@/plugins/axios'
 
 type Sponsor = {
   id: number;
@@ -24,6 +24,19 @@ const selectedSponsor = ref<Sponsor | null>(null)
 onMounted(() => {
   // Fetch sponsors data from sponsors.json
   sponsors.value = sponsorsData as Sponsor[]
+
+  // Fetch sponsors from API
+  api
+    .get('/sponsors/public')
+    .then((response) => {
+      // sponsors.value = response.data.map((s: Sponsor) => ({
+      //   ...s,
+      //   filePath: import.meta.env.VITE_ADMIN_BASE_URL + '/' + s.filePath
+      // }))
+    })
+    .catch((error) => {
+      console.error(error)
+    })
 })
 
 function openModal(sponsor: Sponsor) {
