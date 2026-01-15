@@ -55,7 +55,7 @@ const currentYear = new Date().getFullYear();
         </li>
         <li>
           <div class="flex items-center">
-            <img src="/img/sponsors/vk-drinks.webp" alt="Viking Drinks" class="w-10 h-10" width="40" height="40" />
+            <img src="/img/vk-drinks.webp" alt="Viking Drinks" class="w-10 h-10" width="40" height="40" />
             <span class="ml-2">Viking!Drinks</span>
           </div>
         </li>
