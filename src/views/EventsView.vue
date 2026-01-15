@@ -52,7 +52,7 @@ onMounted(() => {
         </div>
       </template>
       <template v-else>
-        <h3 data-aos="fade-up" class="pt-12">Aucun événement prévu pour le moment. Restez connectés !</h3>
+        <h3 data-aos="fade-up" class="pt-12 text-center">Aucun événement prévu pour le moment. Restez connectés !</h3>
       </template>
     </template>
   </div>
