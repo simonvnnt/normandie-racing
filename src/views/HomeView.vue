@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import TitleSecondary from '@/components/TitleSecondary.vue'
 import SponsorModal from '@/components/SponsorModal.vue'
 import api from '@/plugins/axios'
+import ImageModalable from '@/components/ImageModalable.vue'
 
 type Sponsor = {
   id: number;
