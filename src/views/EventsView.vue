@@ -1,5 +1,26 @@
 <script setup lang="ts">
 import Title from '@/components/Title.vue'
+import { onMounted, ref } from 'vue'
+import api from '@/plugins/axios'
+import ImageModalable from '@/components/ImageModalable.vue'
+
+type Event = { name: string; fromDate: string; toDate: string; imagePath: string };
+
+const events = ref<Event[] | null>(null);
+
+onMounted(() => {
+  api
+    .get('/events/current-year')
+    .then((response) => {
+      events.value = response.data.map((e: Event) => ({
+        ...e,
+        imagePath: e.imagePath ? import.meta.env.VITE_ADMIN_BASE_URL + '/' + e.imagePath : null
+      }))
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+})
 </script>
 
 <template>
@@ -11,10 +32,29 @@ import Title from '@/components/Title.vue'
     </Title>
 
 
-    <div class="flex flex-col mt-12 md:mt-20 gap-12 md:gap-20">
-      <div class="flex flex-col items-center">
-      </div>
-    </div>
+    <template v-if="events">
+      <template v-if="events?.length > 0">
+        <div class="grid grid-cols-4 gap-6 md:gap-10 w-full mt-10 md:mt-14 lg:mt-20">
+          <template v-for="(event, index) in events" :key="index">
+            <div
+              data-aos="fade-up"
+              class="col-span-4 lg:col-span-2 2xl:col-span-1 flex flex-col justify-center gap-4"
+              v-if="event.name && event.imagePath">
+              <h3 class="text-center">{{event.name}}</h3>
+
+              <ImageModalable
+                :img-class="'w-full rounded-md backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1'"
+                :src="event.imagePath"
+                :alt="event.name"
+              />
+            </div>
+          </template>
+        </div>
+      </template>
+      <template v-else>
+        <h3 data-aos="fade-up" class="pt-12 text-center">Aucun événement prévu pour le moment. Restez connectés !</h3>
+      </template>
+    </template>
   </div>
 </template>
 

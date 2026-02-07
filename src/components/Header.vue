@@ -42,7 +42,7 @@ watch(
               Accueil
             </RouterLink>
           </li>
-          <li class="hidden">
+          <li>
             <RouterLink to="/evenements" activeClass="text-red-500" data-link="Événements" class="text-sweep after:text-red-500 after:content-[attr(data-link)] mx-1 md:mx-1.5 lg:mx-4 my-1.5">
               Événements
             </RouterLink>
@@ -75,7 +75,7 @@ watch(
               Accueil
             </RouterLink>
           </li>
-          <li class="delay-[220ms] hidden">
+          <li class="delay-[220ms]">
             <RouterLink to="/evenements" activeClass="text-red-500" data-link="Événements" class="mx-5 my-1.5 text-sweep after:text-red-500 after:content-[attr(data-link)]">
               Événements
             </RouterLink>

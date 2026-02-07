@@ -15,7 +15,7 @@ const currentYear = new Date().getFullYear();
             Accueil
           </RouterLink>
         </li>
-        <li class="hidden">
+        <li>
           <RouterLink to="/evenements" data-link="Événements" class="w-fit text-sweep after:text-red-500 after:content-[attr(data-link)]">
             Événements
           </RouterLink>

@@ -69,12 +69,20 @@ function closeModal() {
 <!--  </div>-->
 
   <div class="max-w-7xl mx-auto pb-10 pt-14 px-8">
-    <ImageModalable
-      :img-class="'rounded-md cursor-pointer'"
-      :src="'/img/calendrier.jpg'"
-      :alt="'Media'"
-      :width="'1200'"
-    />
+    <RouterLink to="/evenements">
+      <img
+        class="rounded-md cursor-pointer"
+        src="/img/calendrier.jpg"
+        alt=""
+        width="1200"
+      />
+    </RouterLink>
+
+    <div class="flex justify-center mt-10" data-aos="fade-up">
+      <RouterLink to="/evenements" class="btn-sweep bg-red-vk before:bg-white text-white hover:text-black font-finder py-3 px-3 text-xl transition-all duration-200 hover:saturate-150">
+        <span>Événements</span>
+      </RouterLink>
+    </div>
 
     <div class="w-full py-12 flex flex-col gap-6 md:gap-20 pt-24">
       <section id="format" class="w-full mx-auto flex flex-col items-center">
