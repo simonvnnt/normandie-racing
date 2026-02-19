@@ -72,7 +72,7 @@ function closeModal() {
     <RouterLink to="/evenements">
       <img
         class="rounded-md cursor-pointer"
-        src="/img/calendrier.jpg"
+        src="/img/calendrier.webp"
         alt=""
         width="1200"
       />
